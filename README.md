@@ -26,7 +26,6 @@ Safe Code Executor is a lightweight sandbox service that executes user-submitted
 
 - Teaching students about sandboxing
   
-
 ### use cases
 
 - Teaching sandboxing and container security
@@ -34,6 +33,22 @@ Safe Code Executor is a lightweight sandbox service that executes user-submitted
 - Building a tiny "run code" feature for a learning site
 
 - Experimenting with isolation and resource limits
+
+# Architecture Overview
+```
+User → Flask API → Docker Sandbox Container → Code Output
+```
+✓ Each execution runs in a fresh disposable container with strong isolation:
+
+- No internet
+
+- Max 128MB memory
+
+- Max 0.5 CPU
+
+- Killed after timeout
+
+- Optional read-only filesystem
 
 # Features
 
@@ -164,6 +179,7 @@ Safe Code Executor is a practical, real-world sandbox project that teaches:
 - Resource and filesystem isolation
 
 ✓ It's a perfect stepping stone toward container security, DevOps, hacking defense, and backend engineering.
+
 
 
 
