@@ -1,8 +1,31 @@
 ﻿# Safe-Code-Executor
  
-- Safe Code Executor is a minimal, production-minded sandbox that executes short user-submitted code safely inside Docker containers.
- 
-- It enforces resource caps (memory, CPU, PIDs), blocks networking, mounts user code read-only, and enforces timeouts so that malicious or buggy code cannot crash your host. The service supports Python and JavaScript (Node.js) and includes a simple web UI.
+ - A minimal, production-minded sandbox for executing untrusted code safely using Docker.
+   
+# Overview 
+
+Safe Code Executor is a lightweight sandbox service that executes user-submitted Python or JavaScript code inside isolated Docker containers with strict security controls:
+
+- CPU, memory & PID limits
+
+- Disabled networking
+
+- Forced execution timeouts
+
+- Read-only filesystem (optional)
+
+- Clear API responses for both success & errors
+  
+### This project is perfect for
+
+- Learning container security
+
+- Building a “run code” feature for tutorials
+
+- Experimenting with Docker isolation
+
+- Teaching students about sandboxing
+  
 
 ### use cases
 
@@ -23,6 +46,7 @@
 - Clear error messages
 
 # Repository layout
+
 ```text
 safe-code-executor/
 ├── app.py                 # Flask backend (Python + Node support)
@@ -33,6 +57,7 @@ safe-code-executor/
 └── README.md
 ```
 # STEP 1 — Create & activate virtual environment (Linux / WSL)
+
 ```text
 
 python3 -m venv venv
@@ -54,13 +79,20 @@ pip install -r requirements.txt
 ```
 docker ps
 ```
-# STEP 4 — Run the server
+# Step 4 — Build the secure Docker runner image
+
+```
+docker build -t python-runner-image -f Dockerfile.runner .
+
+```
+
+# STEP 5 — Run the server
 
 ```
 python3 app.py
 
 ```
-# STEP 5 — Testing the API
+# STEP 6 — Testing the API
 
 ### Test 1: Normal Code
 
@@ -91,7 +123,7 @@ curl -X POST http://127.0.0.1:5000/run \
   -H "Content-Type: application/json" \
   -d "{\"code\":\"import requests; print(requests.get('http://google.com'))\"}"
 ```
-# STEP 6 — Docker Security Experiments
+# STEP 7 — Docker Security Experiments
 
 ### Experiment 1
 ```
@@ -106,8 +138,32 @@ curl -X POST http://127.0.0.1:5000/run \
   -H "Content-Type: application/json" \
   -d "{\"code\": \"open('/app/script.py', 'w').write('hacked')\"}"
 ```
+# Key Learning Outcomes
+✓ Docker isolates processes but does not prevent reading container files
 
+✓ Memory & CPU limits work reliably
 
+✓ Network can be fully disabled
+
+✓ Infinite loops must be handled manually with a timeout
+
+✓ --read-only prevents file modifications inside the container
+
+✓ Docker containers safely protect your host machine
+
+# Conclusion
+
+Safe Code Executor is a practical, real-world sandbox project that teaches:
+
+- Docker’s security boundaries
+
+- How to safely run untrusted code
+
+- API + container orchestration
+
+- Resource and filesystem isolation
+
+✓ It's a perfect stepping stone toward container security, DevOps, hacking defense, and backend engineering.
 
 
 
