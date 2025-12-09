@@ -83,6 +83,9 @@ python3 -m venv venv
 source venv/bin/activate
 
 ```
+
+
+
 # STEP 2 — pip install -r requirements.txt
 
 ```
@@ -179,6 +182,7 @@ Safe Code Executor is a practical, real-world sandbox project that teaches:
 - Resource and filesystem isolation
 
 ✓ It's a perfect stepping stone toward container security, DevOps, hacking defense, and backend engineering.
+
 
 
 
