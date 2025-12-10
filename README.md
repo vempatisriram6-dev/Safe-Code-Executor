@@ -2,6 +2,14 @@
  
  - A minimal, production-minded sandbox for executing untrusted code safely using Docker.
    
+ - Safe Code Executor is a secure, container-based sandbox designed to safely execute untrusted Python and JavaScript code.
+   
+ - The system isolates each execution inside a lightweight Docker container with strict security constraints such as CPU limits, memory limits, disabled networking, execution timeouts, and an optional read-only filesystem.
+
+ - This project demonstrates how to build a real-world sandboxing engine using Docker and Flask—similar to the core of online IDEs, code judges, and secure backend executors.
+ 
+ - It is ideal for learning container security, experimenting with isolation techniques, and understanding how untrusted code can be safely executed without risking the host machine.
+
 # Overview 
 
 Safe Code Executor is a lightweight sandbox service that executes user-submitted Python or JavaScript code inside isolated Docker containers with strict security controls:
@@ -338,6 +346,7 @@ Safe Code Executor is a practical, real-world sandbox project that teaches:
 -  GitHub Profile: [https://github.com/vempatisriram6-dev](https://github.com/vempatisriram6-dev)
 -  Repository: [Safe-Code-Executor](https://github.com/vempatisriram6-dev/Safe-Code-Executor)
 -  Skills Used: Python, Flask, Docker, Linux, WSL, API Security
+
 
 
 
