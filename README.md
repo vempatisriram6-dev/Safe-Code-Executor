@@ -117,7 +117,7 @@ python3 app.py
 
 ![Code Excuter Screenshot](screenshots/code%20excuter.png)
 
-##  Why Two Terminals Are Used
+## Here Two Terminals Are Used
 
 During development and testing, two separate terminals are used for two different purposes:
 
@@ -317,6 +317,7 @@ Safe Code Executor is a practical, real-world sandbox project that teaches:
 -  GitHub Profile: [https://github.com/vempatisriram6-dev](https://github.com/vempatisriram6-dev)
 -  Repository: [Safe-Code-Executor](https://github.com/vempatisriram6-dev/Safe-Code-Executor)
 -  Skills Used: Python, Flask, Docker, Linux, WSL, API Security
+
 
 
 
