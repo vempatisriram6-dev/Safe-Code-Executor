@@ -223,9 +223,10 @@ Safe Code Executor is a practical, real-world sandbox project that teaches:
 #  Author
 
 ### Name: **V. Sriram**
-- 🔗 GitHub Profile: [https://github.com/vempatisriram6-dev](https://github.com/vempatisriram6-dev)
-- 📌 Repository: [Safe-Code-Executor](https://github.com/vempatisriram6-dev/Safe-Code-Executor)
-- 🛠️ Skills Used: Python, Flask, Docker, Linux, WSL, API Security
+-  GitHub Profile: [https://github.com/vempatisriram6-dev](https://github.com/vempatisriram6-dev)
+-  Repository: [Safe-Code-Executor](https://github.com/vempatisriram6-dev/Safe-Code-Executor)
+-  Skills Used: Python, Flask, Docker, Linux, WSL, API Security
+
 
 
 
