@@ -169,7 +169,7 @@ Using two terminals gives a clearer understanding of **how a client interacts wi
 
 ---
 
-### **Why this is important**
+### **Purpose of This Step**
 Using two terminals simulates a real-world environment:
 
 - One terminal acts as the **server**
@@ -346,6 +346,7 @@ Safe Code Executor is a practical, real-world sandbox project that teaches:
 -  GitHub Profile: [https://github.com/vempatisriram6-dev](https://github.com/vempatisriram6-dev)
 -  Repository: [Safe-Code-Executor](https://github.com/vempatisriram6-dev/Safe-Code-Executor)
 -  Skills Used: Python, Flask, Docker, Linux, WSL, API Security
+
 
 
 
