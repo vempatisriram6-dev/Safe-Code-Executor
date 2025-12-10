@@ -33,7 +33,8 @@ Safe Code Executor is a lightweight sandbox service that executes user-submitted
 - Building a tiny "run code" feature for a learning site
 
 - Experimenting with isolation and resource limits
-
+  
+---
 # Architecture Overview
 ```
 User → Flask API → Docker Sandbox Container → Code Output
@@ -50,6 +51,8 @@ User → Flask API → Docker Sandbox Container → Code Output
 
 - Optional read-only filesystem
 
+---
+
 # Features
 
 - Runs Python code in isolated containers
@@ -60,6 +63,7 @@ User → Flask API → Docker Sandbox Container → Code Output
 - Read-only filesystem (optional)
 - Clear error messages
 
+---
 # Repository layout
 
 ```text
@@ -71,6 +75,8 @@ safe-code-executor/
 ├── .gitignore
 └── README.md
 ```
+---
+
 # STEP 1 — Create & activate virtual environment (Linux / WSL)
 
 ```text
@@ -244,7 +250,7 @@ curl -X POST http://127.0.0.1:5000/run \
 - When the container is started with `--read-only`, all write operations inside the container fail.  
 - This prevents attackers from modifying scripts, binaries, or system files.  
 - This is a powerful protection when running untrusted code.
-- 
+  
 ```
 curl -X POST http://127.0.0.1:5000/run \
   -H "Content-Type: application/json" \
@@ -283,6 +289,8 @@ curl -X POST http://127.0.0.1:5000/run \
 ```
 ![JavaScript Screenshot](screenshots/js.png)
 
+---
+
 # Key Learning Outcomes
 ✓ Docker isolates processes but does not prevent reading container files
 
@@ -296,6 +304,7 @@ curl -X POST http://127.0.0.1:5000/run \
 
 ✓ Docker containers safely protect your host machine
 
+---
 # Conclusion
 
 Safe Code Executor is a practical, real-world sandbox project that teaches:
@@ -310,6 +319,7 @@ Safe Code Executor is a practical, real-world sandbox project that teaches:
 
 ✓ It's a perfect stepping stone toward container security, DevOps, hacking defense, and backend engineering.
 
+---
 
 #  Author
 
@@ -317,6 +327,7 @@ Safe Code Executor is a practical, real-world sandbox project that teaches:
 -  GitHub Profile: [https://github.com/vempatisriram6-dev](https://github.com/vempatisriram6-dev)
 -  Repository: [Safe-Code-Executor](https://github.com/vempatisriram6-dev/Safe-Code-Executor)
 -  Skills Used: Python, Flask, Docker, Linux, WSL, API Security
+
 
 
 
