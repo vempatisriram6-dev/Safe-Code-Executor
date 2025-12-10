@@ -16,7 +16,7 @@ Safe Code Executor is a lightweight sandbox service that executes user-submitted
 
 - Clear API responses for both success & errors
   
-### This project is perfect for
+### This project is ideal for 
 
 - Learning container security
 
@@ -26,7 +26,7 @@ Safe Code Executor is a lightweight sandbox service that executes user-submitted
 
 - Teaching students about sandboxing
   
-### use cases
+### Use Cases
 
 - Teaching sandboxing and container security
 
@@ -64,6 +64,16 @@ User → Flask API → Docker Sandbox Container → Code Output
 - Clear error messages
 
 ---
+
+# Prerequisites
+
+- Python 3.11+
+- Docker Desktop
+- pip
+- curl (for testing)
+- Git
+----
+
 # Repository layout
 
 ```text
@@ -77,7 +87,7 @@ safe-code-executor/
 ```
 ---
 
-# STEP 1 — Create & activate virtual environment (Linux / WSL)
+# STEP 1 — Create & Activate Virtual Environment
 
 ```text
 
@@ -93,27 +103,27 @@ source venv/bin/activate
 
 
 
-# STEP 2 — pip install -r requirements.txt
+# STEP 2 — Install Project Dependencies
 
 ```
 pip install -r requirements.txt
 
 ```
-# STEP 3 — Start Docker Desktop (Windows)
+# STEP 3 — Start Docker Engine
 
 ```
 docker ps
 ```
 ![PS Screenshot](screenshots/ps.png)
 
-# Step 4 — Build the secure Docker runner image
+# Step 4 — Build the Docker Sandbox Image
 
 ```
 docker build -t python-runner-image -f Dockerfile.runner .
 
 ```
 
-# STEP 5 — Run the server
+# STEP 5 — Start the Flask API Server
 
 ```
 python3 app.py
@@ -123,7 +133,7 @@ python3 app.py
 
 ![Code Excuter Screenshot](screenshots/code%20excuter.png)
 
-## Here Two Terminals Are Used
+## Using Two Terminals
 
 During development and testing, two separate terminals are used for two different purposes:
 
@@ -268,6 +278,7 @@ curl -X POST http://127.0.0.1:5000/run \
 These experiments demonstrate why Docker is widely used for online code runners, judge systems, online IDEs, and safely executing untrusted code.
 
 ---
+### Language Execution Tests
 
 #  STEP 8 — TEST PYTHON EXECUTION
 
@@ -327,6 +338,7 @@ Safe Code Executor is a practical, real-world sandbox project that teaches:
 -  GitHub Profile: [https://github.com/vempatisriram6-dev](https://github.com/vempatisriram6-dev)
 -  Repository: [Safe-Code-Executor](https://github.com/vempatisriram6-dev/Safe-Code-Executor)
 -  Skills Used: Python, Flask, Docker, Linux, WSL, API Security
+
 
 
 
