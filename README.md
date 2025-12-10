@@ -115,6 +115,8 @@ python3 app.py
 ```
 ![App Screenshot](screenshots/app.png)
 
+![Code Excuter Screenshot](screenshots/code%20excuter.png)
+
 
 # STEP 6 — Testing the API
 
@@ -178,6 +180,7 @@ curl -X POST http://127.0.0.1:5000/run \
   -d '{"language":"python","code":"print(10+20)"}'
 
 ```
+![Python Screenshot](screenshots/python.png)
 
 # STEP 9 — TEST JAVASCRIPT EXECUTION (Node.js)
 
@@ -187,7 +190,7 @@ curl -X POST http://127.0.0.1:5000/run \
 -d '{"language":"js","code":"console.log(100+200)"}'
 
 ```
-
+![JavaScript Screenshot](screenshots/js.png)
 
 # Key Learning Outcomes
 ✓ Docker isolates processes but does not prevent reading container files
@@ -215,6 +218,14 @@ Safe Code Executor is a practical, real-world sandbox project that teaches:
 - Resource and filesystem isolation
 
 ✓ It's a perfect stepping stone toward container security, DevOps, hacking defense, and backend engineering.
+
+
+#  Author
+
+### Name: **V. Sriram**
+- 🔗 GitHub Profile: [https://github.com/vempatisriram6-dev](https://github.com/vempatisriram6-dev)
+- 📌 Repository: [Safe-Code-Executor](https://github.com/vempatisriram6-dev/Safe-Code-Executor)
+- 🛠️ Skills Used: Python, Flask, Docker, Linux, WSL, API Security
 
 
 
