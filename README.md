@@ -98,6 +98,7 @@ pip install -r requirements.txt
 ```
 docker ps
 ```
+![PS Screenshot](screenshots/ps.png)
 
 # Step 4 — Build the secure Docker runner image
 
@@ -168,6 +169,26 @@ curl -X POST http://127.0.0.1:5000/run \
   -d "{\"code\": \"open('/app/script.py', 'w').write('hacked')\"}"
 ```
 ![Read Screenshot](screenshots/read.png)
+
+#  STEP 8 — TEST PYTHON EXECUTION
+
+```
+curl -X POST http://127.0.0.1:5000/run \
+  -H "Content-Type: application/json" \
+  -d '{"language":"python","code":"print(10+20)"}'
+
+```
+
+# STEP 9 — TEST JAVASCRIPT EXECUTION (Node.js)
+
+```
+curl -X POST http://127.0.0.1:5000/run \
+-H "Content-Type: application/json" \
+-d '{"language":"js","code":"console.log(100+200)"}'
+
+```
+
+
 # Key Learning Outcomes
 ✓ Docker isolates processes but does not prevent reading container files
 
@@ -194,6 +215,7 @@ Safe Code Executor is a practical, real-world sandbox project that teaches:
 - Resource and filesystem isolation
 
 ✓ It's a perfect stepping stone toward container security, DevOps, hacking defense, and backend engineering.
+
 
 
 
