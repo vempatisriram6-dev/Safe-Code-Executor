@@ -83,6 +83,7 @@ python3 -m venv venv
 source venv/bin/activate
 
 ```
+![Activate Screenshot](screenshots/activate.png)
 
 
 
@@ -97,6 +98,7 @@ pip install -r requirements.txt
 ```
 docker ps
 ```
+
 # Step 4 — Build the secure Docker runner image
 
 ```
@@ -110,6 +112,9 @@ docker build -t python-runner-image -f Dockerfile.runner .
 python3 app.py
 
 ```
+![App Screenshot](screenshots/app.png)
+
+
 # STEP 6 — Testing the API
 
 ### Test 1: Normal Code
@@ -120,6 +125,8 @@ curl -X POST http://127.0.0.1:5000/run \
   -d '{"code":"print(\"Hello World\")"}'
 
 ```
+
+![Hello Screenshot](screenshots/hello.png)
 ### Test 2: Loop Attack
 
 ```
@@ -127,6 +134,7 @@ curl -X POST http://127.0.0.1:5000/run \
   -H "Content-Type: application/json" \
   -d '{"code":"while True: pass"}'
 ```
+![Pass Screenshot](screenshots/pass.png)
 ### Test 3: Memory Attack
 
 ```
@@ -134,6 +142,7 @@ curl -X POST http://127.0.0.1:5000/run \
   -H "Content-Type: application/json" \
   -d '{"code":"x = \"a\" * 1000000000"}'
 ```
+![100000 Screenshot](screenshots/100000.png)
 ### Test 4: Network Attack
 
  ```
@@ -141,6 +150,7 @@ curl -X POST http://127.0.0.1:5000/run \
   -H "Content-Type: application/json" \
   -d "{\"code\":\"import requests; print(requests.get('http://google.com'))\"}"
 ```
+![Google Screenshot](screenshots/google.png)
 # STEP 7 — Docker Security Experiments
 
 ### Experiment 1
@@ -150,12 +160,14 @@ curl -X POST http://127.0.0.1:5000/run \
   -d "{\"code\": \"print(open('/etc/passwd').read())\"}"
 
 ```
+![Write Screenshot](screenshots/write.png)
 ### Experiment 2
 ```
 curl -X POST http://127.0.0.1:5000/run \
   -H "Content-Type: application/json" \
   -d "{\"code\": \"open('/app/script.py', 'w').write('hacked')\"}"
 ```
+![Read Screenshot](screenshots/read.png)
 # Key Learning Outcomes
 ✓ Docker isolates processes but does not prevent reading container files
 
@@ -182,6 +194,7 @@ Safe Code Executor is a practical, real-world sandbox project that teaches:
 - Resource and filesystem isolation
 
 ✓ It's a perfect stepping stone toward container security, DevOps, hacking defense, and backend engineering.
+
 
 
 
